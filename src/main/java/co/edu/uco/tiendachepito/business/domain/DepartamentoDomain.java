@@ -9,7 +9,7 @@ public class DepartamentoDomain{
     }
 
     public static final DepartamentoDomain crear(final int id, final String nombre){
-        return new DepartamentoDomain(int id, String nombre)
+        return new DepartamentoDomain(int id, String nombre);
     }
 
     private DepartamentoDomain(){
