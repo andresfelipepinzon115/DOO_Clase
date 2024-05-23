@@ -21,7 +21,7 @@ public final class PaisDTO {
 		return new PaisDTO();
 	}
 	
-	public final int getId(final int id) {
+	public final int getId() {
 		return id;
 	}
 	public final PaisDTO setId(final int id) {
@@ -35,6 +35,8 @@ public final class PaisDTO {
 		this.nombre = TextHelper.applyTrim(nombre);
 		return this;
 	}
+
+
 	
 
 	
