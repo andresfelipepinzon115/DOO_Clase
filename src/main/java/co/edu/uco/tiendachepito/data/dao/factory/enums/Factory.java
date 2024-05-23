@@ -4,5 +4,6 @@ public enum Factory {
     AZURE_SQL,
     SQL_SERVER,
     MYSQL,
-    ORACLE
+    ORACLE,
+    POSTGRESQL
 }

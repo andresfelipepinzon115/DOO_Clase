@@ -31,7 +31,8 @@ public final class AzureSqlDAOFactory  extends DAOFactory{
         }catch (final Exception exception){
         //TODO: Manejo de excepciones
 
-
+	
+        }
     }
 
     @Override
