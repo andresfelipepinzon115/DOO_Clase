@@ -1,34 +1,45 @@
+package co.edu.uco.tiendachepito.business.domain;
+
+import co.edu.uco.tiendachepito.crosscutting.helpers.TextHelper;
+
 public class PaisDomain{
+	
     private int id;
     private String nombre;
 
-    public PaisDomain(final int id, final String nombre) {
-        this.id = id;
-        this.nombre = nombre;
+    
+    private PaisDomain(final int id, final String nombre){
+    	setId(id);
+        setNombre(nombre);
     }
-
-    public static final PaisDomain crear(final int id, final String nombre){
-        return new PaisDomain(int id, String nombre)
+    
+    private PaisDomain() {
+    	setNombre(TextHelper.EMPTY);
     }
-
-    private PaisDomain(){
-        setNombre(Text.helper.EMPTY);
-        setPais(PaisDomain.crear());
+    
+    public static final PaisDomain crear(final int id, final String nombre) {
+    	return new PaisDomain(id,nombre);
     }
+    
+    
+    public static final PaisDomain crear() {
+    	return new PaisDomain();
+    }
+    
 
-    public int getId() {
+    public final int getId() {
         return id;
     }
 
-    public String getNombre() {
+    public final String getNombre() {
         return nombre;
     }
 
-    private void setNombre(String nombre) {
+    private void setNombre(final String nombre) {
         this.nombre = TextHelper.applyTrim(nombre);
     }
 
-    private void setId(int id) {
+    private void setId(final int id) {
         this.id = id;
     }
 }
