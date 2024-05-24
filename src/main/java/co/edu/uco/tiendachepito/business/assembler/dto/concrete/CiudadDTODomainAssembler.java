@@ -11,12 +11,18 @@ import co.edu.uco.tiendachepito.dto.PaisDTO;
 
 public class CiudadDTODomainAssembler implements DTODomainAssembler <CiudadDomain, CiudadDTO>{
 	
-	public static final DTODomainAssembler<CiudadDomain, CiudadDTO> instancia = new CiudadDTODomainAssembler();
+	private static final DTODomainAssembler<CiudadDomain, CiudadDTO> instancia = new CiudadDTODomainAssembler();
 	
-	private static final DTODomainAssembler<DepartamentoDomain, DepartamentoDTO> DepartamentoAssembler = DepartamentoDTODomainAssembler.obtenerInstancia();
+	public static final DTODomainAssembler<DepartamentoDomain, DepartamentoDTO> DepartamentoAssembler = DepartamentoDTODomainAssembler.obtenerInstancia();
 	
 	private CiudadDTODomainAssembler() {
 		super();
+	}
+		
+	public static final DTODomainAssembler <CiudadDomain, CiudadDTO> obtenerInstancia(){
+		return instancia;
+	}
+		
 
 }
 	@Override
